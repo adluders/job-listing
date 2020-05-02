@@ -1,11 +1,3 @@
-:root {
-  --grayish-cyan: #effafa;
-  --light-gray-cyan: #eef6f6;
-  --dark-gray-cyan: #7b8e8e;
-  --very-dark-cyan: #2c3a3a;
-  --desat-cyan: #5ba4a4;
-}
-
 img {
   display: inline-block;
   width: 100%;
@@ -13,9 +5,4 @@ img {
 
 .App {
   background-color: var(--grayish-cyan);
-}
-
-.Header {
-  background-color: var(--desat-cyan);
-  margin-bottom: 3rem;
 }

@@ -1,14 +1,12 @@
 import React from "react";
 import JobListing from "./components/JobListing/JobListing";
-import header from "./assets/images/bg-header-desktop.svg";
+import Header from "./components/Header/Header";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <div className="Header">
-        <img src={header} alt="Header" />
-      </div>
+      <Header />
       <JobListing />
     </div>
   );

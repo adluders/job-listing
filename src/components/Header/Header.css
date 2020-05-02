@@ -1,0 +1,34 @@
+.Header {
+  background-color: var(--desat-cyan);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.Filters {
+  /* border: solid red; */
+  position: absolute;
+  top: 90%;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+}
+
+.Filter {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray-cyan);
+  color: var(--desat-cyan);
+  border: none;
+  padding: 0 1rem;
+}
+
+span {
+  background-color: var(--desat-cyan);
+  display: flex;
+  margin-left: 0.4rem;
+}
+
+/* .Filter * {
+  margin: 0 1rem;
+} */

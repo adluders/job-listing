@@ -1,26 +1,12 @@
 import React from "react";
+import Logo from "../../assets/images/photosnap.svg";
 import "./IndividualJob.css";
-
-// const data = {
-//   id: 1,
-//   company: "Photosnap",
-//   logo: "./images/photosnap.svg",
-//   new: true,
-//   featured: true,
-//   position: "Senior Frontend Developer",
-//   role: "Frontend",
-//   level: "Senior",
-//   postedAt: "1d ago",
-//   contract: "Full Time",
-//   location: "USA Only",
-//   languages: ["HTML", "CSS", "JavaScript"],
-// };
 
 const IndividualJob = ({ data }) => {
   return (
     <div className="Individual-Job">
       <div className="Logo">
-        <img src={`${data.logo}`} alt={`${data.company} Logo`} />
+        <img src={Logo} alt={`${data.company} Logo`} />
       </div>
       <div className="Individual-Job-Info">
         <div className="Title">

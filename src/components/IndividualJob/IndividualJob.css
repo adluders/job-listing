@@ -1,13 +1,4 @@
-:root {
-  --grayish-cyan: #effafa;
-  --light-gray-cyan: #eef6f6;
-  --dark-gray-cyan: #7b8e8e;
-  --very-dark-cyan: #2c3a3a;
-  --desat-cyan: #5ba4a4;
-}
-
 .Individual-Job {
-  /* border: solid red; */
   display: flex;
   align-items: center;
   width: 80%;
@@ -15,25 +6,20 @@
   box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.15);
   padding: 1rem;
   background-color: #fff;
-  /* grid-template-columns: repeat(1fr, 3fr); */
-  /* justify-content: space-around;
-  align-items: center; */
-  /* flex-direction: column; */
 }
 
 .Individual-Job-Info {
   width: 100%;
+  margin-left: 2rem;
+  align-items: flex-start;
 }
 
 .Title {
   display: flex;
-  /* justify-content: space-between; */
-  /* border: solid black; */
-  /* align-self: start; */
 }
 
 .Title * {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 
 .Company-Name {
@@ -59,7 +45,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: solid black; */
+  margin: 1rem 0;
+}
+
+.Position:hover {
+  color: var(--desat-cyan);
+  cursor: pointer;
 }
 
 .Job-Title-Info * {
@@ -73,6 +64,13 @@
   border-radius: 0.2rem;
   padding: 0 0.5rem;
   cursor: pointer;
+  font-weight: 700;
+}
+
+.Badge:hover,
+.Badge:active {
+  background-color: var(--desat-cyan);
+  color: var(--light-gray-cyan);
 }
 
 .Job-Info {
@@ -80,7 +78,7 @@
 }
 
 .Job-Info * {
-  margin: 0 1rem;
+  margin-right: 0.5rem;
 }
 
 .Job-Info *::after {
