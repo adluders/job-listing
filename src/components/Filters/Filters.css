@@ -1,0 +1,14 @@
+.Filter {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray-cyan);
+  color: var(--desat-cyan);
+  border: none;
+  padding: 0.2rem 1rem;
+}
+
+span {
+  background-color: var(--desat-cyan);
+  display: flex;
+  margin-left: 0.4rem;
+}

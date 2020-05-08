@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../assets/images/photosnap.svg";
 import "./IndividualJob.css";
 
-const IndividualJob = ({ data }) => {
+const IndividualJob = ({ data, displayFilter }) => {
   return (
     <div className="Individual-Job">
       <div className="Logo">
@@ -17,15 +17,42 @@ const IndividualJob = ({ data }) => {
         <div className="Job-Title">
           <h1 className="Position"> {data.position} </h1>
           <div className="Job-Title-Info">
-            <button className="Role Badge"> {data.role} </button>
-            <button className="Level Badge"> {data.level} </button>
+            <button
+              className="Role Badge"
+              onClick={displayFilter}
+              value={data.role}
+            >
+              {data.role}
+            </button>
+            <button
+              className="Level Badge"
+              onClick={displayFilter}
+              value={data.level}
+            >
+              {" "}
+              {data.level}{" "}
+            </button>
             {data.languages &&
               data.languages.map((lan) => (
-                <button className="Language Badge"> {lan} </button>
+                <button
+                  className="Language Badge"
+                  key={lan}
+                  onClick={displayFilter}
+                  value={lan}
+                >
+                  {lan}
+                </button>
               ))}
             {data.tools &&
               data.tools.map((tool) => (
-                <button className="Tool Badge"> {tool} </button>
+                <button
+                  className="Tool Badge"
+                  key={tool}
+                  onClick={displayFilter}
+                  value={tool}
+                >
+                  {tool}
+                </button>
               ))}
           </div>
         </div>

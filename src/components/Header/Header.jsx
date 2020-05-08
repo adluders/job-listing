@@ -1,19 +1,19 @@
 import React from "react";
+import Filters from "../Filters/Filters";
 import header from "../../assets/images/bg-header-desktop.svg";
-import closeBtn from "../../assets/images/icon-remove.svg";
 import "./Header.css";
 
 const Header = () => {
   return (
     <div className="Header">
       <img src={header} alt="Header" />
-      <div className="Filters">
-        <button className="Filter">
-          FrontEnd
-          <span>
-            <img src={closeBtn} alt="Remove Filter" />
-          </span>
-        </button>
+
+      <div className="Filters-Section">
+        <Filters name={"New"} />
+
+        <div className="Clear-Filters">
+          <button>Clear</button>
+        </div>
       </div>
     </div>
   );
