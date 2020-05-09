@@ -3,9 +3,9 @@ import closeBtn from "../../assets/images/icon-remove.svg";
 
 import "./Filters.css";
 
-const Filters = ({ name }) => {
+const Filters = ({ name, handleFilterRemove }) => {
   return (
-    <div className="Filters">
+    <div className="Filters" onClick={handleFilterRemove}>
       <button className="Filter">
         {name}
         <span>

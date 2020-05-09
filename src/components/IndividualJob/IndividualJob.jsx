@@ -29,8 +29,7 @@ const IndividualJob = ({ data, displayFilter }) => {
               onClick={displayFilter}
               value={data.level}
             >
-              {" "}
-              {data.level}{" "}
+              {data.level}
             </button>
             {data.languages &&
               data.languages.map((lan) => (

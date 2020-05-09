@@ -4,19 +4,11 @@ import data from "../../data/jobs/data.json";
 
 import "./JobListing.css";
 
-const displayFilter = (e) => {
-  console.log(e.target.value);
-};
-
-const JobListing = () => {
+const JobListing = ({ handleClick }) => {
   return (
     <div>
       {data.map((item) => (
-        <IndividualJob
-          key={item.id}
-          data={item}
-          displayFilter={displayFilter}
-        />
+        <IndividualJob key={item.id} data={item} displayFilter={handleClick} />
       ))}
     </div>
   );
