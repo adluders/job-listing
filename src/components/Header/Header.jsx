@@ -9,15 +9,17 @@ const Header = ({ propItems, handleFilterRemove }) => {
       <img src={header} alt="Header" />
 
       <div className="Filters-Section">
-        {propItems
-          ? propItems.map((item) => (
-              <Filters
-                name={item}
-                key={item}
-                handleFilterRemove={handleFilterRemove}
-              />
-            ))
-          : null}
+        <div className="Filters">
+          {propItems
+            ? propItems.map((item) => (
+                <Filters
+                  name={item}
+                  key={item}
+                  handleFilterRemove={handleFilterRemove}
+                />
+              ))
+            : null}
+        </div>
 
         <div className="Clear-Filters">
           <button>Clear</button>
