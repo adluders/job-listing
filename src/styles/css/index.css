@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  background-color: #effafa;
+}
+
+.badge {
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background-color: #5ba4a4;
+}
+
+.badge-secondary {
+  background-color: #2c3a3a;
+}
+
+.filter {
+  background-color: #eef6f6;
+  border: none;
+  outline: none;
+  color: #5ba4a4;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.filter:hover {
+  background-color: #5ba4a4;
+  color: #ffffff;
+}
+
+.header {
+  height: 25vh;
+  margin-bottom: 3rem;
+  background-image: url("../../assets/images/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5ba4a4;
+  position: relative;
+}
+
+.filter-bar {
+  background-color: #fff;
+  width: 85%;
+  position: absolute;
+  bottom: -10%;
+  left: 7.5%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.filter-bar .filter-item {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: #eef6f6;
+  padding: 0.3rem;
+}
+
+.filter-bar .filter-item p {
+  color: #5ba4a4;
+  font-size: 13px;
+}
+
+.filter-bar .filter-item button {
+  outline: none;
+  border: none;
+  padding: 0.3rem;
+  margin-left: 0.4rem;
+  background-color: #5ba4a4;
+  display: flex;
+  cursor: pointer;
+}
+
+.filter-bar .filter-item button:hover {
+  background-color: #2c3a3a;
+}
+
+.filter-bar .filter-item button img {
+  pointer-events: none;
+}
+
+.filter-bar .filter-clear {
+  margin-left: auto;
+}
+
+.filter-bar .filter-clear button {
+  background-color: transparent;
+  padding: 0.3rem;
+  text-transform: capitalize;
+  color: #5ba4a4;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.filter-bar .filter-clear button:hover {
+  text-decoration: underline;
+}
+
+.jobs-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+.job.featured {
+  border-left: 7px solid #5ba4a4;
+}
+
+.job__details {
+  flex-grow: 1;
+  margin: auto 2rem;
+}
+
+.job__details-company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.job__details-company p:first-of-type {
+  color: #5ba4a4;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.job__details-position {
+  margin: 0.8rem 0;
+}
+
+.job__details-position h1 {
+  text-transform: capitalize;
+  color: #2c3a3a;
+  cursor: pointer;
+}
+
+.job__details-position h1:hover {
+  color: #5ba4a4;
+}
+
+.job__details-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.job__details-info p {
+  color: #7b8e8e;
+}
+
+.job__filters {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 990px) {
+  .job {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header {
+    background-image: url("../../assets/images/bg-header-mobile.svg");
+    margin-bottom: 5rem;
+  }
+  .job {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 5rem auto;
+    padding: 3rem 0 2rem 1rem;
+  }
+  .job__graphic {
+    position: absolute;
+    top: -50px;
+    left: 2%;
+  }
+  .job__details {
+    margin: 0;
+  }
+  .job__filters {
+    border-top: 1px solid #2c3a3a;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=index.css.map */

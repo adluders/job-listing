@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+// Background
+$light-grayish-cyan-bg: hsl(180, 52%, 96%);
+// Filter Tablets
+$light-grayish-cyan: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  background-color: $light-grayish-cyan-bg;
+}
+
+// Utility Classes
+.badge {
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  &-primary {
+    background-color: $desaturated-dark-cyan;
+  }
+  &-secondary {
+    background-color: $very-dark-grayish-cyan;
+  }
+}
+
+.filter {
+  background-color: $light-grayish-cyan;
+  border: none;
+  outline: none;
+  color: $desaturated-dark-cyan;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $desaturated-dark-cyan;
+    color: #ffffff;
+  }
+}
+
+// Header
+.header {
+  height: 25vh;
+  margin-bottom: 3rem;
+  background-image: url("../../assets/images/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $desaturated-dark-cyan;
+  position: relative;
+}
+
+// Filter Bar
+.filter-bar {
+  background-color: #fff;
+  width: 85%;
+  position: absolute;
+  bottom: -10%;
+  left: 7.5%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .filter-item {
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: $light-grayish-cyan;
+    padding: 0.3rem;
+    p {
+      color: $desaturated-dark-cyan;
+      font-size: 13px;
+    }
+    button {
+      outline: none;
+      border: none;
+      padding: 0.3rem;
+      margin-left: 0.4rem;
+      background-color: $desaturated-dark-cyan;
+      display: flex;
+      cursor: pointer;
+      &:hover {
+        background-color: $very-dark-grayish-cyan;
+      }
+      img {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .filter-clear {
+    margin-left: auto;
+    button {
+      background-color: transparent;
+      padding: 0.3rem;
+      text-transform: capitalize;
+      color: $desaturated-dark-cyan;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Job Container
+.jobs-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+// Job
+.job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+
+  border-radius: 0.4rem;
+
+  &.featured {
+    border-left: 7px solid $desaturated-dark-cyan;
+  }
+
+  &__details {
+    flex-grow: 1;
+    margin: auto 2rem;
+
+    &-company {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      p:first-of-type {
+        color: $desaturated-dark-cyan;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+    }
+
+    &-position {
+      margin: 0.8rem 0;
+      h1 {
+        text-transform: capitalize;
+        color: $very-dark-grayish-cyan;
+        cursor: pointer;
+        &:hover {
+          color: $desaturated-dark-cyan;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      p {
+        color: $dark-grayish-cyan;
+      }
+    }
+  }
+
+  &__filters {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@import "./mobile";

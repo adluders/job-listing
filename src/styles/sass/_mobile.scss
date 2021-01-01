@@ -1,0 +1,36 @@
+@media screen and (max-width: 990px) {
+  .job {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  // Header
+  .header {
+    background-image: url("../../assets/images/bg-header-mobile.svg");
+    margin-bottom: 5rem;
+  }
+
+  // Job
+  .job {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 5rem auto;
+    padding: 3rem 0 2rem 1rem;
+    &__graphic {
+      position: absolute;
+      top: -50px;
+      left: 2%;
+    }
+    &__details {
+      margin: 0;
+    }
+    &__filters {
+      border-top: 1px solid $very-dark-grayish-cyan;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+  }
+}

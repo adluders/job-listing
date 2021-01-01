@@ -24,3 +24,7 @@ yarn-error.log*
 
 # misc notes file
 /src/notes.md
+
+
+*.log
+unused*
